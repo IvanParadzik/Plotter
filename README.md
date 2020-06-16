@@ -1,2 +1,4 @@
 # Plotter
-Low budget manipulator for printing photos.
+## Low budget manipulator for printing photos.
+
+The goal of this project is to design and construct low cost robotic manipulator  with three degrees of freedom whose purpose is to print photos. Simple construction is connected with hardware system that enables control of manipulator mechanism. Hardware parts used for this project are two stepper motors with motor drivers which  enable rotational movement of the manipulator arms, and one servo motor  that enables lowering and lifting of the pen from the drawing surface. Microcontroller used for controlling the manipulator is Raspberry Pi Zero W. Implemented control software uses mathematical model which defines the position of the pen in coordinate system of manipulator. Control software uses result of the image processing software, which represents the path that the manipulator must traverse in order to print a photo. Both softwares are implemented in Python programming language. Finally, experimental results of image processing as well as images, printed by the manipulator using those results,  are shown. 
