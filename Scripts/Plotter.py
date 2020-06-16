@@ -202,73 +202,7 @@ class Plotter():
                 self.move_anti_clockwise_2()
                 self.round_steps_count2 += 1
                 print(self.round_steps_count1, self.round_steps_count2)
-    # def get_position_xy(self):
-    #     ### MATEMATIČKI MODEL (PRVI SLUČAJ)
-    #     # if self.alfa > self.check_stepper_angle_1:
-    #     #     if self.current_y < 0:
-    #     #         self.current_y = 0
-    #     #     try:
-    #     #         omega_y = math.atan(self.current_x / self.current_y)
-    #     #     except ZeroDivisionError:
-    #     #         omega_y = math.pi / 2
-    #     #     AC = self.current_x / math.sin(omega_y)
-    #     #     gama = math.acos(( self.arm_1 ** 2 - self.arm_2 ** 2 + AC ** 2 ) / (2 * self.arm_1 * AC))
-    #     #     new_alfa = math.pi/2 + (gama - omega_y)
-    #     #     new_alfa_degrees = math.degrees(new_alfa)
-    #     #     epsilon = math.acos((self.arm_1 ** 2 + self.arm_2 ** 2 - AC ** 2) / (2 * self.arm_1 * self.arm_2))
-    #     #     self.new_beta = epsilon
-    #     #     new_beta_degrees = math.degrees(self.new_beta)
-    #     #     ### RAČUNAJE BROJA KORAKA KOJE MOTOR TREBA NAPRAVIT DA ZAUZME NOVI KUT
-    #     #     delta_1 = self.alfa - new_alfa_degrees
-    #     #     self.alfa = new_alfa_degrees
-    #     #     delta_2 = self.beta - new_beta_degrees
-    #     #     self.beta = new_beta_degrees
-    #     #     print('Stepper_angle1: ', self.alfa , ' degrees' ,'Stepper_angle2: ', self.beta, ' degrees')
-    #     #     count_steps1 = delta_1 / self.step_angle
-    #     #     count_steps2 = delta_2 / self.step_angle
-    #     #     count_steps1 += self.error1
-    #     #     count_steps2 += self.error2
-    #     #     self.round_steps_count1 = round(count_steps1)
-    #     #     self.round_steps_count2 = round(count_steps2)
-    #     #     self.final_steps_count1 += self.round_steps_count1
-    #     #     self.final_steps_count2 += self.round_steps_count2
-    #     #     self.error1 = count_steps1 - self.round_steps_count1
-    #     #     self.error2 = count_steps2 - self.round_steps_count2
-    #     #     print(self.round_steps_count1, self.round_steps_count2)
-    #     #     ### POKRETANJE MOTORA
-    #     #     self.move_motors_by_step_count()
-    #     #
-    #     # ### MATEMATIČKI MODEL (DRUGI SLUČAJ)
-    #     # elif self.alfa <= self.check_stepper_angle_1:
-    #     ###IMPLEMENTACIJA MATEMATIČKOG MODELA
-    #     omega_x = math.atan(self.current_y / self.current_x)
-    #     AC = self.current_x / math.cos(omega_x)
-    #     gama = math.acos((AC ** 2 + self.arm_1 ** 2 - self.arm_2 ** 2) / (2 * self.arm_1 * AC))
-    #     new_alfa = omega_x +  gama
-    #     new_alfa_degrees = math.degrees(new_alfa)
-    #     epsilon = math.acos((self.arm_1 ** 2 + self.arm_2 ** 2 - AC ** 2) / (2 * self.arm_1 * self.arm_2))
-    #     new_beta = epsilon
-    #     new_beta_degrees = math.degrees(new_beta)
-    #     ### RAČUNAJE BROJA KORAKA KOJE MOTOR TREBA NAPRAVIT DA ZAUZME NOVI KUT
-    #     delta_1 = self.alfa - new_alfa_degrees
-    #     self.alfa = new_alfa_degrees
-    #     delta_2 = self.beta - new_beta_degrees
-    #     self.beta = new_beta_degrees
-    #     print('Stepper_angle1: ', self.alfa, ' degrees', 'Stepper_angle2: ',
-    #           self.beta, ' degrees')
-    #     count_steps1 = delta_1 / self.step_angle
-    #     count_steps2 = delta_2 / self.step_angle
-    #     count_steps1 += self.error1
-    #     count_steps2 += self.error2
-    #     self.round_steps_count1 = round(count_steps1)
-    #     self.round_steps_count2= round(count_steps2)
-    #     self.final_steps_count1 += self.round_steps_count1
-    #     self.final_steps_count2 += self.round_steps_count2
-    #     self.error1 = count_steps1 - self.round_steps_count1
-    #     self.error2 = count_steps2 - self.round_steps_count2
-    #     print(self.round_steps_count1,self.round_steps_count2)
-    #     #POKRETANJE MOTORA
-    #     self.move_motors_by_step_count()
+
     def get_position_xy(self):
 
         ###IMPLEMENTACIJA MATEMATIČKOG MODELA
